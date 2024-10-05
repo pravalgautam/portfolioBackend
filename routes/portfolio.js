@@ -10,7 +10,7 @@ router.get('/', async (req, res) => {
   try {
     const portfolio = await Portfolio.findOne();
     if (!portfolio) {
-      return res.status(404).json({ message: 'Portfolio not found' });
+      return res.status(404).json({ message: 'Portfolio not found in your BAckend' });
     }
     res.json(portfolio);
   } catch (err) {
