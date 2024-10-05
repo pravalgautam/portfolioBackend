@@ -12,7 +12,9 @@ const app = express();
 // Middleware
 app.use(cors());
 app.use(express.json());
-
+app.get('/health',(request,res)=>{
+return res.status(200).json({'message': 'Fuck you'})
+})
 // Routes
 const portfolioRoutes = require('./routes/portfolio');
 app.use('/api/portfolio', portfolioRoutes);
